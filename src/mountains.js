@@ -1,15 +1,12 @@
-export interface Mountain {
-    name: string,
-    height: number
-}
-
-const mountains: Mountain[] = [
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.findNameOfTallestMountain = void 0;
+const mountains = [
     { name: "Kilimanjaro", height: 19341 },
     { name: "Everest", height: 29029 },
     { name: "Denali", height: 20310 }
 ];
-
-export function findNameOfTallestMountain(mountains: Mountain[]): string {
+function findNameOfTallestMountain(mountains) {
     if (mountains.length === 0) {
         return "";
     }
@@ -20,7 +17,7 @@ export function findNameOfTallestMountain(mountains: Mountain[]): string {
         }
     }
     return tallestMountain.name;
-}    
-
+}
+exports.findNameOfTallestMountain = findNameOfTallestMountain;
 const tallestMountainName = findNameOfTallestMountain(mountains);
 console.log(tallestMountainName);
